@@ -11,3 +11,20 @@ BVE code can be run with this command
 ```
 ros2 launch bird_view bve_autopilot_launch.py
 ```
+
+In order to install, you can use included dockerfile and build it
+
+```
+docker build -t bve_autopilot:humble .
+```
+
+after that launch the docker alongside the rosbag:
+
+```commandline
+xhost +local:docker                                         # allow X11
+docker run -it \
+  --env="DISPLAY" \
+  --env="QT_X11_NO_MITSHM=1" \
+  --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+  bve_autopilot:humble
+```
