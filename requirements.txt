@@ -3,3 +3,7 @@ opencv-python==4.9.0.80
 torch==2.2.2
 ultralytics==8.2.13
 scikit-learn
+pyqtgraph
+PyOpenGL 
+PyOpenGL_accelerate
+trimesh
