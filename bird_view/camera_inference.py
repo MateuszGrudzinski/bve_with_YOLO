@@ -36,7 +36,7 @@ class CameraLidarFusion(Node):
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
 
-        self.model = YOLO('yolov8m.pt')
+        self.model = YOLO('yolov8m.pt') 
         self.out_pub = self.create_publisher(PoseArray, '/detected_vehicles', 10)
 
         self.fx, self.fy = 500, 500
